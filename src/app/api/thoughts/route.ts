@@ -34,6 +34,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(newThought, { status: 201 });
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ error: "Failed to save thought" }, { status: 500 });
   }
 }
